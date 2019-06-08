@@ -55,14 +55,6 @@ client.on("message", function(message) {
 		if (connection) {
 			connection.disconnect();
 		}
-	} else if (content === prefix + "debug") {
-		message.author.send({
-			files: [{
-				attachment: "voices.json",
-				name: "voices.json"
-			}]
-		}).catch(logger.error);
-		logger.debug(JSON.stringify(voices));
 	} else {
 		const id = (message.guild || message.channel).id;
 		if (voices[id]) {
