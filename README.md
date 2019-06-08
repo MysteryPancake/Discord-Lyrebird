@@ -3,33 +3,32 @@ Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
 
 ## Commands
 ### Add Voice
+`lyre_addvoice`
+
 *Registers your voice to be used with `lyre_voice<INDEX>`.*
 
 *Your voice can only be used on the server the command was run on.*
 
-`lyre_addvoice`
-
 ### Join
-*Joins the voice channel you are currently in.*
-
 `lyre_join`
 
-### Leave
-*Leaves the voice channel.*
+*Joins the voice channel you are currently in.*
 
+### Leave
 `lyre_leave`
 
+*Leaves the voice channel.*
+
 ### Generate Voice
+`lyre_voice<INDEX>`
+
 *Generates speech using a voice registered with `lyre_addvoice`.*
 
 *If the bot is in a voice channel, the speech will play through the channel.*
 
 *If not, the speech will be sent as an attachment.*
 
-`lyre_voice<INDEX>`
-
 #### Example
-
 `lyre_voice1 Hello!`
 
 ## Setup
