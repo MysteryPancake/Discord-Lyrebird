@@ -47,7 +47,7 @@ Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
 
 7. To add your bot, go to `https://discordapp.com/oauth2/authorize?client_id=<CLIENT_ID>&scope=bot`, with `<CLIENT_ID>` as your Discord app's client ID.
 
-8. [Install node.js](https://nodejs.org/en/download): `brew install node`
+8. [Install Node.js](https://nodejs.org/en/download): `brew install node`
 
 9. [Install FFmpeg](https://www.ffmpeg.org/download.html): `brew install ffmpeg`
 
