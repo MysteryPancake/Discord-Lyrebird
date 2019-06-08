@@ -3,7 +3,9 @@ Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
 
 ## Commands
 ### Add Voice
-*Registers your voice to be used with `lyre_voice<INDEX>`. Your voice can only be used on the server the command was ran.*
+*Registers your voice to be used with `lyre_voice<INDEX>`.*
+
+*Your voice can only be used on the server the command was run on.*
 
 `lyre_addvoice`
 
@@ -17,15 +19,23 @@ Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
 
 `lyre_leave`
 
-### Use Voice
-*Generates speech using a voice registered with `lyre_addvoice`. If the bot is in a voice channel, the speech will play through the channel. If not, the speech will be sent as an attachment.*
+### Generate Voice
+*Generates speech using a voice registered with `lyre_addvoice`.*
+
+*If the bot is in a voice channel, the speech will play through the channel.*
+
+*If not, the speech will be sent as an attachment.*
 
 `lyre_voice<INDEX>`
+
+#### Example
+
+`lyre_voice1 Hello!`
 
 ## Setup
 1. [Create your voice](https://myvoice.lyrebird.ai).
 
-2. Set the environment variable `LYRE_REDIRECT_URI` to your server's address. Locally, this will be `http://localhost:4000`. This is used for token authorization.
+2. Set the environment variable `LYRE_REDIRECT_URI` to your computer address. Locally, this will be `http://localhost:4000`. This is used for authorization.
 
 3. [Create your Lyrebird app](https://myvoice.lyrebird.ai/application/new). Make sure `Redirect URI` matches `LYRE_REDIRECT_URI`.
 
