@@ -1,0 +1,42 @@
+{
+  "name": "Discord-Lyrebird",
+  "version": "1.0.0",
+  "description": "Text to speech Discord bot using the Lyrebird API.",
+  "main": "lyrebird.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lyrebird.js"
+  },
+  "keywords": [
+  	"discord",
+  	"discord-bot",
+  	"discord-js",
+  	"discord-api",
+  	"discordjs",
+  	"discordjs-bot",
+  	"discordjsbot",
+  	"discordapp",
+  	"discordbot",
+  	"nodejs",
+  	"node-js",
+  	"bot",
+  	"tts",
+  	"text-to-speech",
+  	"nodejs-bot",
+  	"lyrebird",
+  	"javascript"
+  ],
+  "author": "MysteryPancake",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "express": "^4.17.1",
+    "heroku-logger": "^0.3.3",
+    "node-opus": "^0.3.2",
+    "request": "^2.88.0"
+  }
+}
