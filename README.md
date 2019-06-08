@@ -3,7 +3,7 @@ Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
 
 ## Commands
 ### Add Voice
-*Registers your Lyrebird voice to be used with the bot. Your voice can only be used in the guild the command is run in.*
+*Registers your voice to be used with `lyre_voice<INDEX>`. Your voice can only be used on the server the command was run.*
 
 `lyre_addvoice`
 
