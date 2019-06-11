@@ -78,7 +78,7 @@ client.on("message", function(message) {
 							if (error) {
 								logger.error(error);
 								fs.unlinkSync(fileName);
-							} else if (response.statusCode === 400) {
+							} else if (response.statusCode !== 200) {
 								message.channel.send(response.body.description).catch(logger.error);
 								fs.unlinkSync(fileName);
 							} else if (message.guild && message.guild.voice && message.guild.voice.connection) {
@@ -89,7 +89,7 @@ client.on("message", function(message) {
 								message.channel.send({
 									files: [{
 										attachment: fileName,
-										name: utterance + ".wav"
+										name: utterance.replace(/[^a-z0-9]/gi, "_") + ".wav"
 									}]
 								}).then(function() {
 									fs.unlinkSync(fileName);
