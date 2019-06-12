@@ -114,7 +114,7 @@ function connected(db) {
 					const utterance = message.content.slice((prefix + "say").length).trim();
 					playUtterance(utterance, result.token.access_token, message);
 				} else {
-					message.channel.send("No registered voices!").catch(console.error);
+					message.channel.send("You have no registered voice! Add one with `" + prefix + "addvoice`!").catch(console.error);
 				}
 			});
 		} else if (content.startsWith(prefix)) {
