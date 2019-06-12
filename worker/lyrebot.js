@@ -1,7 +1,5 @@
 "use strict";
 
-require("dotenv").config(); // only for local stuff
-
 const GENERATE_API = "https://avatar.lyrebird.ai/api/v0/generate";
 const AUTH_API = "https://myvoice.lyrebird.ai/authorize";
 

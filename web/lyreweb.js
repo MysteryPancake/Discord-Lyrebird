@@ -1,7 +1,5 @@
 "use strict";
 
-require("dotenv").config(); // only for local stuff
-
 const TOKEN_API = "https://avatar.lyrebird.ai/api/v0/token";
 
 const logger = require("heroku-logger");

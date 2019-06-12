@@ -33,7 +33,6 @@
   "author": "MysteryPancake",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "heroku-logger": "^0.3.3",
     "mongodb": "^3.2.7",
