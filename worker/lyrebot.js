@@ -93,7 +93,7 @@ function connected(db) {
 		} else if (content.startsWith(prefix + "share")) {
 			const command = content.slice((prefix + "share").length).trim();
 			if (command) {
-				db.collection("voices").updateOne({ author: message.author.id, guild: guild }, { $set: { command: command } }, function(error) {
+				db.collection("voices").findOneAndUpdate({ author: message.author.id, guild: guild }, { $set: { command: command } }, { sort: [["_id", "desc"]] }, function(error) {
 					if (error) {
 						console.error(error);
 						message.channel.send("Error adding command!").catch(console.error);
@@ -106,7 +106,7 @@ function connected(db) {
 				message.channel.send("Type a command! For example, `" + prefix + "share myvoice` will allow others to use your voice with the command `" + prefix + "myvoice`.").catch(console.error);
 			}
 		} else if (content.startsWith(prefix + "say")) {
-			db.collection("voices").findOne({ author: message.author.id, guild: guild }, function(error, result) {
+			db.collection("voices").findOne({ author: message.author.id, guild: guild }, { sort: [["_id", "desc"]] }, function(error, result) {
 				if (error) {
 					console.error(error);
 					message.channel.send("Error retrieving voice!").catch(console.error);
@@ -119,7 +119,7 @@ function connected(db) {
 			});
 		} else if (content.startsWith(prefix)) {
 			const command = content.split(" ")[0].slice(prefix.length).trim();
-			db.collection("voices").findOne({ guild: guild, command: command }, function(error, result) {
+			db.collection("voices").findOne({ guild: guild, command: command }, { sort: [["_id", "desc"]] }, function(error, result) {
 				if (error) {
 					console.error(error);
 					message.channel.send("Error retrieving voice `" + command + "`!");
