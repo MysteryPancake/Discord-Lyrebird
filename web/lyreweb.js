@@ -70,7 +70,7 @@ function connected(db) {
 			res.send("Query parameters <code>code</code> and <code>state</code> are required!");
 		}
 	});
-	app.listen(process.env.PORT || 4000, function() {
+	app.listen(process.env.PORT || 8080, function() {
 		logger.info("WEBSITE READY FOR ACTION!");
 	});
 }

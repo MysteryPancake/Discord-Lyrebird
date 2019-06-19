@@ -156,6 +156,6 @@ app.get("/", function(req, res) {
 	}
 });
 
-app.listen(process.env.PORT || 4000, function() {
+app.listen(process.env.PORT || 8080, function() {
 	logger.info("WEBSITE READY FOR ACTION!");
 });

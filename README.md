@@ -42,7 +42,7 @@ Alternatively, the [combined version of this bot](https://github.com/MysteryPanc
 ## Setup
 1. [Create your voice](https://myvoice.lyrebird.ai).
 
-2. Set the environment variable `LYRE_REDIRECT_URI` to your computer's address. Locally, this will be `http://localhost:4000`. This is used for authorization.
+2. Set the environment variable `LYRE_REDIRECT_URI` to your computer's address. Locally, this will be `http://localhost:8080`. This is used for authorization.
 
 3. [Create your Lyrebird app](https://myvoice.lyrebird.ai/application/new). Make sure `Redirect URI` matches `LYRE_REDIRECT_URI`.
 
