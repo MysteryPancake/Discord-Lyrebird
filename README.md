@@ -39,6 +39,13 @@ Alternatively, the [combined version of this bot](https://github.com/MysteryPanc
 
 *Leaves the voice channel.*
 
+### Say Token
+`lyre_saytoken`
+
+*Generates speech using a Lyrebird token provided directly.*
+
+*This command does not require a database, but is not recommended as others can see your token.*
+
 ## Setup
 1. [Create your voice](https://myvoice.lyrebird.ai).
 

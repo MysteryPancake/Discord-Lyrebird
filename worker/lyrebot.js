@@ -14,8 +14,17 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+function updateStatus() {
+	const connections = client.voice && client.voice.connections;
+	if (connections) {
+		client.user.setActivity(connections.size + " voice" + (connections.size === 1 ? "" : "s")).catch(console.error);
+	} else {
+		client.user.setActivity("0 voices").catch(console.error);
+	}
+}
+
 client.on("ready", function() {
-	client.user.setActivity("with your voice").catch(console.error);
+	updateStatus();
 	console.log("BOT READY FOR ACTION!");
 });
 
@@ -79,7 +88,7 @@ function connected(db) {
 			});
 		} else if (content === prefix + "join") {
 			if (message.member.voice && message.member.voice.channel) {
-				message.member.voice.channel.join().catch(function() {
+				message.member.voice.channel.join().then(updateStatus).catch(function() {
 					message.channel.send("Missing permission to join voice channels!").catch(console.error);
 				});
 			} else {
@@ -89,6 +98,7 @@ function connected(db) {
 			const connection = message.guild.voice && message.guild.voice.connection;
 			if (connection) {
 				connection.disconnect();
+				updateStatus();
 			}
 		} else if (content.startsWith(prefix + "share")) {
 			const command = content.slice((prefix + "share").length).trim();
@@ -104,6 +114,15 @@ function connected(db) {
 				});
 			} else {
 				message.channel.send("Type a command! For example, `" + prefix + "share myvoice` will allow others to use your voice with the command `" + prefix + "myvoice`.").catch(console.error);
+			}
+		} else if (content.startsWith(prefix + "saytoken")) {
+			const parts = message.content.slice((prefix + "saytoken").length).trim().split(" ");
+			const token = parts[0].trim();
+			if (token) {
+				const utterance = parts.slice(1).join(" ").trim();
+				playUtterance(utterance, token, message);
+			} else {
+				message.channel.send("No token specified!").catch(console.error);
 			}
 		} else if (content.startsWith(prefix + "say")) {
 			db.collection("voices").findOne({ author: message.author.id, guild: guild }, { sort: [["_id", "desc"]] }, function(error, result) {
