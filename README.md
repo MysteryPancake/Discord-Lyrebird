@@ -1,11 +1,9 @@
-## THE LYREBIRD API IS DEPRECATED, SO THIS NO LONGER WORKS :(
+# THE LYREBIRD API IS NOW DEPRECATED :(
+Text to speech Discord bot which used the deprecated [Lyrebird API](https://docs.lyrebird.ai).
 
-# [Discord Lyrebird](https://discordapp.com/oauth2/authorize?client_id=586507491156951050&scope=bot)
-Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
+This bot was designed to work with [Heroku](https://www.heroku.com), with separate [web](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/web) and [worker](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/worker) applications to prevent the bot from going offline. This functionality required a [MongoDB database](https://www.mongodb.com) to store authorized voices and communicate between the applications.
 
-This bot is designed to work with [Heroku](https://www.heroku.com), with separate [web](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/web) and [worker](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/worker) applications to prevent the bot from going offline. This functionality requires a [MongoDB database](https://www.mongodb.com) to store authorized voices and communicate between the applications.
-
-Alternatively, the [combined version of this bot](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/combined) does not require setting up a database, but can only be run on a server with persistent storage. [Heroku's storage is cleared every time the application is restarted](https://devcenter.heroku.com/articles/active-storage-on-heroku).
+Alternatively, the [combined version of this bot](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/combined) did not require setting up a database, but could only be run on a server with persistent storage. [Heroku's storage is cleared every time the application is restarted](https://devcenter.heroku.com/articles/active-storage-on-heroku). I never finished the combined version, so it is missing some features present in the separated version.
 
 ## Commands
 ### Add Voice
