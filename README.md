@@ -1,4 +1,4 @@
-# THE LYREBIRD API IS NOW DEPRECATED, SO THIS NO LONGER WORKS
+## THE LYREBIRD API IS DEPRECATED, SO THIS NO LONGER WORKS :(
 
 # [Discord Lyrebird](https://discordapp.com/oauth2/authorize?client_id=586507491156951050&scope=bot)
 Text to speech Discord bot using the [Lyrebird API](https://docs.lyrebird.ai).
