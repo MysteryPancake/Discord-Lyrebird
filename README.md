@@ -1,3 +1,5 @@
+<img src="lyrebird.png?raw=true" width="75" align="left">
+
 # THE LYREBIRD API IS NOW DEPRECATED :(
 Text to speech Discord bot which used the deprecated [Lyrebird API](https://docs.lyrebird.ai).
 
@@ -70,5 +72,3 @@ Alternatively, the [combined version of this bot](https://github.com/MysteryPanc
 11. [Run the bot](https://github.com/MysteryPancake/Discord-Lyrebird/blob/master/combined/lyrebird.js): `npm start`
 
 12. Hope it works!
-
-![Icon](lyrebird.png?raw=true)
