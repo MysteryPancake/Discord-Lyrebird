@@ -3,9 +3,9 @@
 # THE LYREBIRD API IS NOW DEPRECATED :(
 Text to speech Discord bot which used the deprecated [Lyrebird API](https://docs.lyrebird.ai).
 
-This bot was designed to work with [Heroku](https://www.heroku.com), with separate [web](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/web) and [worker](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/worker) applications to prevent the bot from going offline. This functionality required a [MongoDB database](https://www.mongodb.com) to store authorized voices and communicate between the applications.
+This bot was designed to work with [Heroku](https://www.heroku.com), with separate [web](/web) and [worker](/worker) applications to prevent the bot from going offline. This functionality required a [MongoDB database](https://www.mongodb.com) to store authorized voices and communicate between the applications.
 
-Alternatively, the [combined version of this bot](https://github.com/MysteryPancake/Discord-Lyrebird/tree/master/combined) did not require setting up a database, but could only be run on a server with persistent storage. [Heroku's storage is cleared every time the application is restarted](https://devcenter.heroku.com/articles/active-storage-on-heroku). I never finished the combined version, so it is missing some features present in the separated version.
+Alternatively, the [combined version of this bot](/combined) did not require setting up a database, but could only be run on a server with persistent storage. [Heroku's storage is cleared every time the application is restarted](https://devcenter.heroku.com/articles/active-storage-on-heroku). I never finished the combined version, so it is missing some features present in the separated version.
 
 ## Commands
 ### Add Voice
@@ -69,6 +69,6 @@ Alternatively, the [combined version of this bot](https://github.com/MysteryPanc
 
 10. Install the dependencies: `npm install`
 
-11. [Run the bot](https://github.com/MysteryPancake/Discord-Lyrebird/blob/master/combined/lyrebird.js): `npm start`
+11. [Run the bot](/combined/lyrebird.js): `npm start`
 
 12. Hope it works!
